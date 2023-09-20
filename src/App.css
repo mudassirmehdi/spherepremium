@@ -24,7 +24,7 @@
 
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(45deg,#33f,#ff2e4c);
-    border-radius: 1px
+    border-radius: 10px;
 }
 
 body { 
@@ -37,6 +37,29 @@ body {
     backdrop-filter: blur(64px);
     border-radius: 0.5rem;
     background-color: #00000007;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    opacity: 0;
+}
+.navbar-toggler ,.navbar-toggler:focus {
+    position: relative;
+    border: none !important;
+    box-shadow: none !important;
+}
+.navbar-toggler::after {
+    content: '\f00d';
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    color: rgba(255,255,255,0.5);
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navbar-toggler.collapsed::after {
+    content: '\f0c9';
 }
 
 .navbar-toggler {
@@ -79,10 +102,24 @@ body {
 
 .hero-main svg {
     width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
 }
-
-.hero-main .container {
-    margin-top: -416px;
+.hero-bg {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.hero-main .inner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
 }
 
 .hero-main .hero-content {
@@ -135,7 +172,21 @@ body {
         clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
     }
 } 
+.dark-mode .hero-main .hero-image .light { 
+    display: block;
+}
+.dark-mode .hero-main .hero-image .dark { 
+    display: none;
+}
+     
+.hero-main .hero-image .light {
+    display: none;
+}
 
+.hero-main .hero-image {
+    width: 100%;  
+    max-width: 500px;  
+}
 .hero-main .hero-content h1 {
     font-size: 4.5rem;
     line-height: 1;
@@ -146,11 +197,11 @@ body {
     font-weight: 700;
 }
 
-.hero-main .hero-content p {
+.hero-main .hero-content > p {
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .hero-main .hero-content .hero-cta {
@@ -192,7 +243,7 @@ body {
 }
 
 .our-pricing {
-    padding: 10rem 0;
+    padding: 0 0 10rem 0;
 }
 
 .section-heading {
@@ -201,7 +252,7 @@ body {
 
 .section-heading h2 {
     font-size: 3rem;
-    line-height: 1;
+    line-height: 1.3;
     letter-spacing: -.025em;
     color: transparent;
     font-weight: 700;
@@ -254,11 +305,46 @@ body {
 }
 
 .our-pricing .pricing-plan .tab-content .pricing-card {
-   
+    position: relative;
+    z-index: 2;
+}
+.our-pricing .pricing-plan .tab-content .pricing-card .card-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(to right bottom, rgb(51, 51, 255), rgb(255, 46, 76));
+    opacity: 0.2;
+}
+.card-overlay-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.card-overlay-wrapper {
+    filter: blur(40px);
+}
+.our-pricing .pricing-plan .tab-content .pricing-card .card-overlay{
+    clip-path:polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%);
+}
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.2);
+}
+.our-pricing .pricing-plan .tab-content .pricing-card {
+    display: flex;
     border-radius: 1.5rem;
     border: 2px solid #3333ffaf;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-duration: .7s;
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: transparent;
 }
 
 .our-pricing .pricing-plan .tab-content .pricing-card:hover {
@@ -268,25 +354,62 @@ body {
     
 }
 
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head {
+    border-right: 2px solid rgba(255,255,255,0.2);
+}
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head {
+    border-right: 2px solid rgba(255,255,255,0.2);
+}
 .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head {
-    /* margin-bottom: 1.5rem; */
     padding: 2.5rem;
-    border-bottom: 2px solid #3333ffaf;
-
+    border-right: 2px solid rgba(255,255,255,0.2);
+    border-right: 2px solid #3333ffaf;;
+    text-align: center;
+    width: 40%;
 }
 
 .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body {
     padding: 2.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
 }
 
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head h5, .dark-mode .pricing-card-body h5  { 
+    color: #fff;
+}
+.our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body h5{
+    color: #3333ffcf;
+    line-height: 2rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    border-bottom: 2px solid #3333ffaf;
+    margin-bottom: 10px;
+}
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card  .pricing-card-body h5  { 
+    color: #fff;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+.our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body ul li svg {
+    color: #3333ffcf;
+}
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body ul li svg {
+    color: rgba(255,255,255,0.5);
+}
 .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head h5 {
     color: #3333ffcf;
     line-height: 2rem;
     font-weight: 600;
     font-size: 1.125rem;
     margin-bottom: 0px;
+    padding-right: 30px;    
 }
-
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head .badge-prim {
+    color: #fff;
+    background-color: rgba(51, 51, 255, 0.7);
+}
 .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head .badge-prim {
     color: #3333ffcf;
     padding: .375rem 1rem;
@@ -297,13 +420,20 @@ body {
     border-radius: 9999px;
 }
 
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head h3 {
+    color: #FFF;
+}
 .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head h3 {
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 700;
     letter-spacing: -.025em;
+    color: rgb(33, 37, 41);
 }
 
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head  h3 span {
+    color: rgba(255,255,255,0.5);
+}
 .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head  h3 span {
     line-height: 1.5rem;
     font-size: .875rem;
@@ -312,6 +442,9 @@ body {
     font-weight: 600;
 }
 
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body .pricing-card-btn {
+    background-color: rgba(51, 51, 255, 0.7);
+}
 .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body .pricing-card-btn {
     /* margin-bottom: 2.5rem; */
     color: #fff;
@@ -327,15 +460,23 @@ body {
     text-align: center;
     display: block;
     border-radius: 0.375rem;
+    width: 100%;
+    max-width: 180px;
 }
 
 .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body ul {
     margin-bottom: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
 }
 .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body ul li svg {
     margin-right: .75rem;
 }
 
+.dark-mode .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body ul li {
+    color: #FFF;
+}
 .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body ul li {
     font-size: .875rem;
     color: rgb(107 114 128/1);
@@ -585,17 +726,57 @@ footer .footer-newsletter form .input-group input {
 }
 
 
+@media only screen and (max-width: 1199px) {
+    .hero-main .hero-image {
+        max-width: 400px;
+    }
+    .hero-main .hero-content {
+        padding: 3rem 3rem;
+    }
+}
 @media only screen and (max-width: 992px) {
     .navbar .nav-item {
         margin-left: 0rem;
     }
-
+    /* .hero-main .hero-image {
+        max-width: 100%;
+    } */
+    .hero-main {
+        height: auto;
+    }
+    .hero-main .container {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+    .hero-main .hero-content {
+        width: 100%;
+    }
     .navbar .nav-item {
         margin: 8px 0;
+    }
+    .hero-main .hero-content .hero-logo h2 {
+        font-size: 3rem;
+    }
+    .hero-main .hero-content .hero-logo h2:nth-child(2) {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
     }
 
     footer .footer-links {
         padding-left: 0px;
+    }
+    .our-pricing .pricing-plan .tab-content .pricing-card {
+        display: block;
+    }
+    .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head{
+        width: 100%;
+        border-bottom: 2px solid #3333ffaf;
+        border-right: none;
+    }
+    .dark-mode .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-head{
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        border-right: none;
     }
 }
 
@@ -603,7 +784,14 @@ footer .footer-newsletter form .input-group input {
     .hero-main .hero-content .hero-logo h2 {  
         font-size: 4rem; 
     }
+    .hero-main .hero-image {
+        margin: 30px auto 0 auto; 
+    }
+    .hero-main {
+        padding-top: 80px;
+    }
 }
+
 
 
 @media only screen and (max-width: 580px) {
@@ -613,6 +801,39 @@ footer .footer-newsletter form .input-group input {
 
     .hero-main .hero-content {
         padding: 4rem 2rem;
+    }
+    .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body {
+        padding: 1rem;
+    }
+    .copyright {
+        text-align: center;
+    }
+    .btn-discord {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 528px) {
+    .our-pricing .pricing-plan .tab-content .pricing-card .pricing-card-body ul {
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .hero-main {
+        padding-top: 50px;
+    }
+    .our-pricing .pricing-plan .tab-content .pricing-card .title-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .our-pricing .pricing-plan .tab-content .pricing-card .title-wrapper h5 {
+        padding: 0;
+    }
+    .hero-main .hero-content .hero-logo h2 {
+        font-size: 2.5rem;
+    }
+    .hero-main .container {
+        padding: 0 5px;
     }
 }
 

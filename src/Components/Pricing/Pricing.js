@@ -9,12 +9,11 @@ export const Pricing = () => (
             <div className="row justify-content-center">
                 <div className="col-lg-7">
                     <div className="section-heading text-center">
-                        <h2>Explore Our Pricing</h2>
-                        <p>Choose an affordable plan that’s packed with the best features for you.</p>
+                        <h2 data-aos-delay="50" data-aos="zoom-in-up"  data-aos-duration="900" data-aos-anchor-placement="bottom-bottom">Explore Our Pricing</h2>
+                        <p data-aos-delay="80" data-aos="zoom-in-up"  data-aos-duration="900" data-aos-anchor-placement="bottom-bottom">Choose an affordable plan that’s packed with the best features for you.</p>
                     </div>
                 </div>
             </div> 
-
             <div className="row">
                 <div className="col-lg-12">
                     <div className="pricing-plan">
@@ -29,13 +28,14 @@ export const Pricing = () => (
                           <div className="tab-content" id="myTabContent">
                             <div className="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                                 <div className="row">
-                                <div className="col-lg-4">
-                                        <div className="pricing-card">
+                                <div className="col">
+                                        <div data-aos="zoom-in-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom" className="pricing-card">
+                                        <div className="card-overlay-wrapper"><div className="card-overlay"></div></div>
                                             <div className="pricing-card-head  ">
                                                 <img className='mb-4' src={logof1_1} alt='logof1'/>
                                                 {/* <img className="mb-4" src="../%PUBLIC_URL%/logofl_1.png" > */}
                                                     
-                                                <div className="d-flex justify-content-between align-items-center flex-wrap mb-4">
+                                                <div className="d-flex justify-content-around justify-content-lg-between align-items-center mb-4 title-wrapper">
                                                     <h5>Windows Lifetime</h5>
                                                     <div className="badge-prim">
                                                         Most Popular
@@ -46,10 +46,7 @@ export const Pricing = () => (
                                             </div>
 
                                             <div className="pricing-card-body">
-                                                
-
-                                                
-
+                                                <h5>Key Features</h5>
                                                 <ul className="list-unstyled">
                                                     <li>
                                                         <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -67,6 +64,26 @@ export const Pricing = () => (
                                                         <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                                         Free support
                                                     </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
                                                 </ul>
 
                                                 <a href="#" className="pricing-card-btn">Purchase</a>
@@ -77,12 +94,13 @@ export const Pricing = () => (
                             </div>
                             <div className="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                                 <div className="row">
-                                <div className="col-lg-4">
-                                        <div className="pricing-card">
+                                <div className="col">
+                                        <div data-aos="zoom-in-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom" className="pricing-card">
+                                        <div className="card-overlay-wrapper"><div className="card-overlay"></div></div>
                                             <div className="pricing-card-head">
                                                 <img className="mb-4" src={logosw_1} alt=""/>
                                                         
-                                                <div className="d-flex justify-content-between align-items-center flex-wrap mb-4">
+                                                <div className="d-flex justify-content-around justify-content-lg-between align-items-center mb-4 title-wrapper">
                                                     <h5>Script-Ware M</h5>
                                                     <div className="badge-prim">
                                                         Most Popular
@@ -93,10 +111,7 @@ export const Pricing = () => (
                                             </div>
 
                                             <div className="pricing-card-body">
-                                              
-
-                                                
-
+                                                <h5>Key Features</h5>
                                                 <ul className="list-unstyled">
                                                     <li>
                                                         <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -114,6 +129,30 @@ export const Pricing = () => (
                                                         <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                                         Free support
                                                     </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
+                                                    <li>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                        Free support
+                                                    </li>
                                                 </ul>
 
                                                 <a href="#" className="pricing-card-btn">Purchase</a>
@@ -122,7 +161,6 @@ export const Pricing = () => (
                                     </div>
                                 </div>
                             </div>
-                            
                           </div>
                     </div>
                 </div>
