@@ -10,7 +10,7 @@ export const Hero = () => (
 
         <div className="container inner">
              <div className="row align-items-center w-100">
-                <div className="col-md-7 col-lg-6">
+                <div className="col-md-8 mb-4 mb-lg-0">
                     <div className="d-flex justify-content-center">
                         <div  className="hero-content  text-center">
                             <div data-aos-delay="400" data-aos="zoom-in-up"  data-aos-duration="800" data-aos-anchor-placement="top-bottom" className="hero-logo"> 
@@ -27,10 +27,10 @@ export const Hero = () => (
                      </div>
                 </div>
                 
-                <div className="col-md-5 col-lg-6">
+                <div className="col-md-4 ">
                     <div className="d-flex justify-content-end">
                         <div data-aos-delay="500" data-aos="zoom-in"  data-aos-duration="900" className="hero-image text-center">
-                            <img src="sphere-shape.png" height="400" /> 
+                            <img className="w-100" src="sphere-shape.png"  /> 
                         </div>
                      </div>
                 </div>
