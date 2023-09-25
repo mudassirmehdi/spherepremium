@@ -237,6 +237,13 @@ body {
 }
 
 
+.dark-mode .hero-main .hero-content .hero-cta .hero-btn-bg {
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    color: #000000 !important; 
+}
+
+
 .hero-main .hero-content .hero-cta .hero-btn-outline {
     background-color: #fff;
     color: #000;
@@ -597,8 +604,18 @@ footer .footer-top {
 footer .footer-bottom {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border: 1.5px solid #000;
+    border: 1.5px solid #efefef;
     border-radius:  0.5rem;
+}
+
+.dark-mode footer .footer-bottom {
+    border-color: #2d2d2d !important;
+}
+
+.dark-mode footer .footer-bottom .btn-discord { 
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    color: #000 !important; 
 }
 
 footer .footer-bottom .btn-discord {
@@ -876,9 +893,7 @@ footer .footer-newsletter form .input-group input {
   .dark-mode .hero-main .hero-content .hero-logo h2:nth-child(2){
     color: #fff;
   }
-  .dark-mode footer .footer-bottom{
-    border: 1px solid #fff;
-  }
+ 
   .dark-mode .hero-main .hero-content{
     background-color: #0000007f;
   }
