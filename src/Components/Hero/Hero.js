@@ -30,8 +30,8 @@ export const Hero = () => (
                 <div className="col-md-5 col-lg-6">
                     <div className="d-flex justify-content-end">
                         <div data-aos-delay="500" data-aos="zoom-in"  data-aos-duration="900" className="hero-image text-center">
-                            <img className="light w-100" src="hero-infographic.svg" />
-                            <img className="dark w-100" src="hero-infographic1.svg" />
+                            <img className="light w-100" src="sphere-shape.png" />
+                            <img className="dark w-100" src="sphere-shape.png" />
                         </div>
                      </div>
                 </div>
